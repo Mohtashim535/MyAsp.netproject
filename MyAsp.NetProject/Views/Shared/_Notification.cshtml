@@ -1,0 +1,26 @@
+﻿@section Scripts {
+    <script src="~/lib/jquery/dist/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/toastr.js/latest/js/toastr.min.js"></script>
+
+    <script type="text/javascript">
+        $(document).ready(function () {
+            // Check for success message
+        @if (TempData["Success"] != null)
+
+        {
+            <text>
+                        toastr.success('@TempData["Success"]');
+            </text>
+        }
+
+                // Check for error message
+        @if (TempData["Error"] != null)
+
+        {
+            <text>
+                        toastr.error('@TempData["Error"]');
+            </text>
+        }
+                });
+    </script>
+}
